@@ -1,0 +1,92 @@
+class host2012{
+
+	/*
+	Oppgave 1. 
+	a) Forskjellen på en mutabel og en immutabel klassen er at i den mutable klassen setter man verdier i metoder. F.eks set metoder.
+	 I en immutabel klasse er det ikke set metoder, men bare get metoder.
+
+	b) Grunnen til denne erroren er at klassenavnet er foskjellig fra class navnet. En annen grunn kan være det ikke finnes noen main metoden i klassen slik at det ikke kan kjøres.
+
+
+	c) Øverst er klassenavnet.
+
+	int x= 5 
+	int y = 7
+
+	i) 2*y%x = 4
+	ii) 3+y/x=4
+	iii) (3*x+21/y)%x+4=7
+
+	e)
+	int x = 3 
+	int y = 9
+	int z = 5
+
+	i)x+y<10&&x*z==150&&y-z%x>8=false
+*/
+
+
+	public void tegnKoordinatsystem(GLAutoDrawable glDrawable){
+		GL gl = glDrawable.getGL();
+		gl.glBegin(GL.GL_LINES);
+
+		gl.glVertex3f(5f,0f,0f);
+		gl.glVertex3f(-5f,0f,0f);
+		gl.glVertex3f(0f,5f,0f);
+		gl.glVertex3f(0f,-5f,0f);
+		gl.glVertex3f(0f,0f,5f);
+		gl.glVertex3f(0f,0f,-5f);
+
+		gl.glEnd();
+	}
+
+	public tegnSirkel(GLAutoDrawable glDrawable){
+		GL gl = glDrawable.getGL();
+		gl.glBegin(GL.GL_LINE_LOOP);
+
+		double circlepoints = 1000;
+		double angle = 0;
+		double pi = 3.145;
+
+		for(int i = 0; i<circlepoints; i++){
+			angle = 2*pi*(i/circlepoints);
+			gl.glVertex2f((float)Math.cos(angle),(float)Math.sin(angle));
+		}
+		gl.glEnd();
+	}
+
+	public tegnMunn(GLAutoDrawable glDrawable){
+		GL gl = glDrawable.getGL();
+		gl.glScalef(0.6f,0.3f,1f);
+		gl.glBegin(GL.GL_LINE_LOOP);
+
+		double circlepoints = 1000;
+		double angle = 0;
+		double pi = 3.145;
+
+		for(int i = 0; i<circlepoints; i++){
+			angle = 2*pi*(i/circlepoints);
+			gl.glVertex2f((float)Math.cos(angle),(float)Math.sin(angle));
+		}
+		gl.glEnd();
+	}
+
+	public tegnØye(GLAutoDrawable glDrawable){
+		GL gl = glDrawable.getGL();
+		gl.glScalef(0.3f,0.3f,0.3f);
+		gl.glBegin();
+
+		double circlepoints = 1000;
+		double angle = 0;
+		double pi = 3.145;
+
+		for(int i = 0; i<circlepoints; i++){
+		angle = 2*pi*(i/circlepoints);
+		gl.glVertex2f((float)Math.cos(angle),(float)Math.sin(angle));
+
+		}
+		gl.glEnd();
+	}
+
+
+}
