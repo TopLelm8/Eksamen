@@ -28,6 +28,7 @@ class host2012{
 
 	public void tegnKoordinatsystem(GLAutoDrawable glDrawable){
 		GL gl = glDrawable.getGL();
+		gl.glColorf(0f,0f,0f);
 		gl.glBegin(GL.GL_LINES);
 
 		gl.glVertex3f(5f,0f,0f);
@@ -40,7 +41,7 @@ class host2012{
 		gl.glEnd();
 	}
 
-	public tegnSirkel(GLAutoDrawable glDrawable){
+	public void tegnSirkel(GLAutoDrawable glDrawable){
 		GL gl = glDrawable.getGL();
 		gl.glBegin(GL.GL_LINE_LOOP);
 
@@ -55,7 +56,7 @@ class host2012{
 		gl.glEnd();
 	}
 
-	public tegnMunn(GLAutoDrawable glDrawable){
+	public void tegnMunn(GLAutoDrawable glDrawable){
 		GL gl = glDrawable.getGL();
 		gl.glScalef(0.6f,0.3f,1f);
 		gl.glBegin(GL.GL_LINE_LOOP);
@@ -71,7 +72,7 @@ class host2012{
 		gl.glEnd();
 	}
 
-	public tegnØye(GLAutoDrawable glDrawable){
+	public void tegnØye(GLAutoDrawable glDrawable){
 		GL gl = glDrawable.getGL();
 		gl.glScalef(0.3f,0.3f,0.3f);
 		gl.glBegin();
@@ -87,6 +88,4 @@ class host2012{
 		}
 		gl.glEnd();
 	}
-
-
 }
